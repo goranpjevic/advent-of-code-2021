@@ -17,7 +17,7 @@
 
 (defun main (*posix-argv*)
   (let ((measurments (list 0)))
-    (with-open-file (input "input.txt")
+    (with-open-file (input "../input.txt")
       (when input
         (loop for line = (read-line input nil)
           while line do
