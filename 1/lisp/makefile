@@ -1,7 +1,5 @@
-src = $(wildcard src/*.lisp)
-
-run: $(src)
+run:
 	sbcl --load 1.lisp --eval "(main ())" --eval "(quit)"
 
-build: $(src)
+build:
 	buildapp --load "1.lisp" --entry main --output 1
