@@ -1,5 +1,3 @@
-m←⍎⍕+/⎕csv'../input.txt'
-one←{+/0>2-/⍵}
-two←{one 3+/⍵}
-one m
-two m
+m←,⍎¨⎕CSV'input.txt'
++/2</m
++/2</3+/m
