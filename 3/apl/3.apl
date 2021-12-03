@@ -1,4 +1,4 @@
-n←,⎕csv'input.txt'
+n←,⎕csv'../input.txt'
 g←⍎⍕((≢n)÷2)<+/'1'=n
 (2⊥~g)×2⊥g
 ⍝ criteria
