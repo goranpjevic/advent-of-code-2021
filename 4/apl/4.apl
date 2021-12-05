@@ -1,4 +1,4 @@
-i←⊃⎕nget'input.txt'1
+i←⊃⎕nget'../input.txt'1
 ⍝ drawn numbers
 d←','(≠⊆⊢)⊃i
 all←6{⍺,' ',⍵}/(1↓i)
