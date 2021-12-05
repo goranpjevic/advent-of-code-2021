@@ -20,3 +20,9 @@ add←{
 ⍝ final grid of numbers
 finalgrid←{⍵>≢values:(max×max)⍴0 ⋄ (add⍎⍕(⍵⌷values))+(∇(⍵+1))}1
 +/2≤finalgrid
+
+⍝ get all xs and ys
+xs←{⍵{(1⌷⍺)>(3⌷⍺):⌽⍵⋄⍵}(1-⍨(1⌷⍵)⌊(3⌷⍵))+⍳(1+|(1⌷⍵)-(3⌷⍵))}
+ys←{⍵{(2⌷⍺)>(4⌷⍺):⌽⍵⋄⍵}(1-⍨(2⌷⍵)⌊(4⌷⍵))+⍳(1+|(2⌷⍵)-(4⌷⍵))}
+⍝ count how many pairs of indices repeat more than once
+≢1~⍨{≢⍵}⌸⊃,/{(xs⍵),¨ys⍵}¨values
