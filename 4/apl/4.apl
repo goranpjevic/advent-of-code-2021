@@ -8,7 +8,7 @@ boards←{5 5⍴⍎⍵}¨mask/all
 ⍝ index of the last drawn number and the score of ⍵
 ⍝ only rows are considered
 value←{
-  index←1{(⍴(5⍴1)/⍨5=+/⍵∊⍎¨⍺↑d)=1:⍺ ⋄ (⍺+1)∇ ⍵}⍵
+  index←1{(⍴(5⍴1)/⍨5=+/⍵∊⍎¨⍺↑d)=1:⍺⋄(⍺+1)∇⍵}⍵
   sum←+/(,⍵)/⍨,~⍵∊⍎¨index↑d
   last←index⌷d
   index(sum×⍎⍕last)
