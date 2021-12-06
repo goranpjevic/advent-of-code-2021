@@ -1,9 +1,10 @@
 i←⍎¨','(≠⊆⊢)⊃⊃⎕NGET'../input.txt'1
+counts←{+/i=⍵}¨(1-⍨⍳9)
 it←{
-    ⍝ ⍺: index ; ⍵: state
-    zeroes←0=⍵
-    next←(zeroes+1-⍨⍵+6×zeroes),(+/zeroes)⍴8
+    ⍝ ⍺: index ; ⍵: counts
+    next←(1⊖⍵)+((6⍴0),⊃⍵,0 0)
     ⍺=1:next
     (⍺-1)∇ next
 }
-≢80it i
+⎕PP←34
+{+/⍵it counts}¨80 256
