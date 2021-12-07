@@ -1,5 +1,3 @@
 i←⍎¨,⎕csv'test.txt'
-sortedlist←i[⍋i]
-⌊/{+/|sortedlist-⍵}¨((⊃sortedlist)+1-⍨⍳⊃⌽(sortedlist+1))
-⌊/{+/+/¨⍳¨|sortedlist-⍵}¨((⊃sortedlist)+1-⍨⍳⊃⌽(sortedlist+1))
-
+⌊/{+/|i-⍵}¨((⌊/i)+1-⍨⍳⊃⌽(⌈/i+1))
+⌊/{+/+/¨⍳¨|i-⍵}¨((⌊/i)+1-⍨⍳⊃⌽(⌈/i+1))
