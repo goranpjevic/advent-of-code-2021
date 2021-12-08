@@ -1,4 +1,4 @@
-i←'|'(≠⊆⊢)¨⎕csv'input.txt'
+i←'|'(≠⊆⊢)¨⎕csv'../input.txt'
 +/∊((+/2 3 4 7=⍴)¨' '(≠⊆⊢)⊃)¨1↓¨i
 all←'abcefg' 'cf' 'acdeg' 'acdfg' 'bcdf' 'abdfg' 'abdefg' 'acf' 'abcdefg' 'abcdfg'
 decode←{
