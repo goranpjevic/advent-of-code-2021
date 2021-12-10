@@ -1,4 +1,4 @@
-i←⊃⎕nget'test.txt'1
+i←⊃⎕nget'../input.txt'1
 o←'([{<'
 c←')]}>'
 icf←{i←1↑⍺⋄l←1↓⍺⋄i>⍴l:' '⋄ci←c⍳i⌷l⋄ci>⍴c:((i+1),l)∇(c[o⍳i⌷l]),⍵⋄(i⌷l)=⊃⍵:((i+1),l)∇1↓⍵⋄i⌷l}
