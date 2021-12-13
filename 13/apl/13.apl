@@ -1,4 +1,4 @@
-i←','(≠⊆⊢)¨⊃⎕nget'test.txt'1
+i←','(≠⊆⊢)¨⊃⎕nget'../input.txt'1
 mask←(⍎⍕)¨2=⍴¨i
 p←⍎¨¨mask/i
 f←⊃¨1↓(~mask)/i
